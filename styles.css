@@ -480,26 +480,6 @@ section h2:after {
     letter-spacing: 0.5px;
 }
 
-/* Адаптив */
-@media (max-width: 768px) {
-    .problem-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
-    }
-    .problem-content h3 {
-        font-size: 24px;
-    }
-    .problem-content p {
-        font-size: 16px;
-    }
-    .problem-footer {
-        justify-content: center;
-    }
-    .problem-btn {
-        margin-bottom: 20px;
-    }
-}
 /* ===== ФУТЕР ===== */
 .footer {
     background: #0f2a11;
@@ -529,20 +509,6 @@ section h2:after {
     z-index: 99;
 }
 .to-top.show { opacity: 1; visibility: visible; }
-
-/* ===== АДАПТИВ ===== */
-@media (max-width: 992px) {
-    .about-content, .contact-content, .reviews-grid { grid-template-columns: 1fr; }
-    .hero h2 { font-size: 38px; }
-    .header-container { flex-direction: column; gap: 12px; }
-    .nav { flex-wrap: wrap; justify-content: center; gap: 20px; }
-    section { padding: 60px 0; }
-    section h2 { font-size: 32px; }
-}
-@media (max-width: 640px) {
-    .programs-grid, .staff-grid { grid-template-columns: 1fr; }
-    .slider-item { flex: 0 0 260px; }
-}
 .modal-gallery {
     position: fixed;
     top: 0;
