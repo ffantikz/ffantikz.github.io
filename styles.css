@@ -480,6 +480,26 @@ section h2:after {
     letter-spacing: 0.5px;
 }
 
+/* Адаптив */
+@media (max-width: 768px) {
+    .problem-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    .problem-content h3 {
+        font-size: 24px;
+    }
+    .problem-content p {
+        font-size: 16px;
+    }
+    .problem-footer {
+        justify-content: center;
+    }
+    .problem-btn {
+        margin-bottom: 20px;
+    }
+}
 /* ===== ФУТЕР ===== */
 .footer {
     background: #0f2a11;
@@ -509,6 +529,20 @@ section h2:after {
     z-index: 99;
 }
 .to-top.show { opacity: 1; visibility: visible; }
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 992px) {
+    .about-content, .contact-content, .reviews-grid { grid-template-columns: 1fr; }
+    .hero h2 { font-size: 38px; }
+    .header-container { flex-direction: column; gap: 12px; }
+    .nav { flex-wrap: wrap; justify-content: center; gap: 20px; }
+    section { padding: 60px 0; }
+    section h2 { font-size: 32px; }
+}
+@media (max-width: 640px) {
+    .programs-grid, .staff-grid { grid-template-columns: 1fr; }
+    .slider-item { flex: 0 0 260px; }
+}
 .modal-gallery {
     position: fixed;
     top: 0;
@@ -635,91 +669,5 @@ section h2:after {
         width: 100%;
         text-align: center;
         padding: 12px;
-    }
-}
-/* ===== ЖЁСТКАЯ АДАПТАЦИЯ ДЛЯ ВСЕХ СТРАНИЦ (включая "О колледже") ===== */
-@media (max-width: 768px) {
-    /* шапка */
-    .header-container {
-        flex-direction: column !important;
-        gap: 15px !important;
-    }
-    .logo {
-        text-align: center;
-        justify-content: center;
-    }
-    .nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        width: 100%;
-    }
-    .nav a {
-        font-size: 14px;
-        padding: 6px 12px;
-    }
-    /* контент "О колледже" */
-    .about-content {
-        display: block !important;
-    }
-    .about-text {
-        width: 100% !important;
-        margin-bottom: 30px;
-    }
-    .stats-row {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-    .stat-card {
-        width: 100%;
-        padding: 15px;
-    }
-    .stat-number {
-        font-size: 36px;
-    }
-    /* общие блоки */
-    .container {
-        padding: 0 16px;
-    }
-    section h2 {
-        font-size: 28px;
-    }
-    .programs-grid,
-    .staff-grid,
-    .reviews-grid {
-        grid-template-columns: 1fr !important;
-    }
-}
-/* === МОБИЛЬНАЯ АДАПТАЦИЯ (исправление для "О колледже") === */
-@media (max-width: 768px) {
-    /* Заставляем about-content стать вертикальным */
-    .about-content {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 30px !important;
-    }
-    .about-text {
-        width: 100% !important;
-    }
-    .stats-row {
-        width: 100% !important;
-        flex-direction: column !important;
-    }
-    .stat-card {
-        width: 100% !important;
-        margin-bottom: 15px;
-    }
-    /* Убираем фиксированные размеры у цифр */
-    .stat-number {
-        font-size: 36px !important;
-    }
-    /* Общие улучшения */
-    .container {
-        padding-left: 16px !important;
-        padding-right: 16px !important;
-    }
-    section h2 {
-        font-size: 28px !important;
     }
 }
