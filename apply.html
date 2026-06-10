@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ГБПОУ КТИРНЗ — Заявка на обучение</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Дополнительные стили для страницы заявки */
+        .apply-section {
+            padding: 60px 0;
+            background: #fefcf5;
+        }
+        .apply-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 48px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            border: 1px solid #e9ede5;
+        }
+        .apply-card h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #1f5425;
+            margin-bottom: 8px;
+        }
+        .apply-card .sub {
+            text-align: center;
+            color: #4a6741;
+            margin-bottom: 40px;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: #1e3a1f;
+            margin-bottom: 8px;
+        }
+        .form-group label span.required {
+            color: #d4451e;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid #cddfbf;
+            border-radius: 28px;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            transition: 0.2s;
+            background: #fefcf5;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #2d6a2f;
+            box-shadow: 0 0 0 3px rgba(45,106,47,0.1);
+        }
+        .captcha-block {
+            background: #f9f7f0;
+            border-radius: 32px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 1px solid #e9ede5;
+        }
+        .captcha-step {
+            margin-bottom: 30px;
+        }
+        .captcha-step h4 {
+            font-size: 18px;
+            color: #1f5425;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .images-row {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .captcha-img {
+            width: calc(25% - 12px);
+            aspect-ratio: 1 / 1;
+            background: #eef2e8;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: 0.2s;
+            border: 3px solid transparent;
+            position: relative;
+            font-size: 14px;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .captcha-img.selected {
+            border-color: #2d6a2f;
+            background: #e0f0dc;
+            transform: scale(1.02);
+        }
+        .captcha-img:hover {
+            transform: scale(1.02);
+            background: #e4ecde;
+        }
+        .refresh-captcha {
+            background: none;
+            border: 1px solid #cddfbf;
+            padding: 8px 20px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #2d6a2f;
+            margin-top: 10px;
+            transition: 0.2s;
+        }
+        .refresh-captcha:hover {
+            background: #2d6a2f;
+            color: white;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 20px 0;
+        }
+        .checkbox-group input {
+            width: 20px;
+            height: 20px;
+        }
+        .btn-submit {
+            background: #ffcd4a;
+            color: #1e3a1f;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 60px;
+            font-weight: 800;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.2s;
+            width: 100%;
+        }
+        .btn-submit:hover {
+            background: #ffc107;
+            transform: translateY(-2px);
+        }
+        .required-footnote {
+            font-size: 13px;
+            color: #4a6741;
+            margin-top: 15px;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .apply-card { padding: 25px; }
+            .captcha-img { width: calc(25% - 10px); font-size: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <div class="logo"><h1>ГБПОУ КТИНЗ</h1><p>Колледж традиционных искусств народов Забайкалья</p></div>
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О колледже</a>
+            <a href="programs.html">Направления</a>
+            <a href="staff.html">Коллектив</a>
+            <a href="reviews.html">Отзывы</a>
+            <a href="contact.html">Контакты</a>
+            <a href="media.html">Жизнь колледжа</a>
+            <a href="info.html">Информация</a>
+            <a href="pedagogam.html">Педагогам</a>
+            <a href="apply.html">Заявка на обучение</a>
+        </nav>
+        <a href="https://vk.com/ktinz_03" target="_blank" class="vk-link" rel="noopener noreferrer">
+            <img src="ува.png" alt="ВКонтакте" class="vk-img">
+        </a>
+    </div>
+</header>
+
+<section class="apply-section">
+    <div class="container">
+        <div class="apply-card">
+            <h2>Заявка на обучение</h2>
+            <div class="sub">Оставьте свои данные, и мы свяжемся с вами</div>
+
+            <form id="applyForm">
+                <div class="form-group">
+                    <label>Ваше имя: <span class="required">*</span></label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Ваш телефон: <span class="required">*</span></label>
+                    <input type="tel" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label>Ваш E-mail:</label>
+                    <input type="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label>Текст сообщения: <span class="required">*</span></label>
+                    <textarea rows="4" name="message" required></textarea>
+                </div>
+
+                <!-- Капча: 4 шага с выбором изображений -->
+                <div class="captcha-block">
+                    <div class="captcha-step" data-step="1">
+                        <h4><i class="fas fa-image"></i> Шаг 1: Без обводки</h4>
+                        <div class="images-row" data-step="1"></div>
+                    </div>
+                    <div class="captcha-step" data-step="2">
+                        <h4><i class="fas fa-adjust"></i> Шаг 2: Без цветокоррекции</h4>
+                        <div class="images-row" data-step="2"></div>
+                    </div>
+                    <div class="captcha-step" data-step="3">
+                        <h4><i class="fas fa-filter"></i> Шаг 3: Без фильтра "Пикселизация"</h4>
+                        <div class="images-row" data-step="3"></div>
+                    </div>
+                    <div class="captcha-step" data-step="4">
+                        <h4><i class="fas fa-check-circle"></i> Шаг 4: Выберите изображение по условию (шаблон)</h4>
+                        <div class="images-row" data-step="4"></div>
+                    </div>
+                    <button type="button" class="refresh-captcha" id="refreshImages">🔄 Обновить изображения</button>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="consent" required>
+                    <label for="consent">Я ознакомлен и согласен на обработку моих персональных данных в соответствии с политикой конфиденциальности</label>
+                </div>
+
+                <div class="required-footnote">Поля отмеченные <span class="required">*</span> обязательны для заполнения</div>
+                <button type="submit" class="btn-submit">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 ГБПОУ «Колледж традиционных искусств и ремёсел народов Забайкалья» (ГБПОУ КТИРНЗ)</p>
+        <p><a href="index.html">Главная</a> | <a href="about.html">О колледже</a> | <a href="apply.html">Заявка на обучение</a></p>
+    </div>
+</footer>
+
+<div class="to-top" id="toTopBtn"><i class="fas fa-chevron-up"></i></div>
+<script src="common.js"></script>
+<script>
+    // --- Генерация случайных изображений для капчи (имитация) ---
+    // Для демонстрации создаём 4 варианта изображений для каждого шага
+    // Правильные ответы: шаг1 – индекс 1 (без обводки), шаг2 – индекс 2 (без цветокоррекции), шаг3 – индекс 0 (без пикселизации), шаг4 – индекс 3
+    const correctAnswers = [1, 2, 0, 3];
+    let currentImages = [[], [], [], []];
+
+    function generateRandomImages() {
+        // Генерируем для каждого шага 4 изображения с разными "свойствами"
+        // В реальности можно использовать реальные картинки, здесь – текстовые метки
+        const sampleImages = [
+            { desc: "🖼️ Изобр. 1 (с обводкой)", invalidFor1: true, invalidFor2: false, invalidFor3: false },
+            { desc: "🖼️ Изобр. 2 (без обводки)", invalidFor1: false, invalidFor2: false, invalidFor3: false },
+            { desc: "🖼️ Изобр. 3 (с цветокоррекцией)", invalidFor1: false, invalidFor2: true, invalidFor3: false },
+            { desc: "🖼️ Изобр. 4 (с пикселизацией)", invalidFor1: false, invalidFor2: false, invalidFor3: true }
+        ];
+        for (let step = 0; step < 4; step++) {
+            // Перемешиваем массив sampleImages для разнообразия
+            let shuffled = [...sampleImages];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            currentImages[step] = shuffled.slice(0,4);
+            renderStep(step);
+        }
+    }
+
+    function renderStep(step) {
+        const container = document.querySelector(`.captcha-step[data-step="${step+1}"] .images-row`);
+        if (!container) return;
+        container.innerHTML = '';
+        currentImages[step].forEach((img, idx) => {
+            const div = document.createElement('div');
+            div.className = 'captcha-img';
+            div.textContent = img.desc;
+            div.dataset.index = idx;
+            div.dataset.step = step;
+            // Проверяем, подходит ли под условие шага
+            let isValid = false;
+            if (step === 0) isValid = !img.invalidFor1;      // без обводки
+            else if (step === 1) isValid = !img.invalidFor2; // без цветокоррекции
+            else if (step === 2) isValid = !img.invalidFor3; // без пикселизации
+            else if (step === 3) isValid = (idx === 3);      // для примера правильный – последний (индекс 3)
+            div.dataset.valid = isValid;
+            div.addEventListener('click', () => selectImage(step, idx));
+            container.appendChild(div);
+        });
+    }
+
+    function selectImage(step, idx) {
+        // Убираем выделение у всех в этом шаге
+        const stepContainer = document.querySelector(`.captcha-step[data-step="${step+1}"] .images-row`);
+        const items = stepContainer.querySelectorAll('.captcha-img');
+        items.forEach(item => item.classList.remove('selected'));
+        // Выделяем выбранное
+        const selected = items[idx];
+        selected.classList.add('selected');
+        // Сохраняем выбранное значение (валидность)
+        selected.dataset.selected = 'true';
+    }
+
+    function refreshAll() {
+        generateRandomImages();
+    }
+
+    document.getElementById('refreshImages').addEventListener('click', refreshAll);
+
+    // Валидация формы
+    document.getElementById('applyForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Проверка обязательных полей (браузер сам проверит required, но добавим доп.)
+        const name = this.querySelector('[name="name"]').value.trim();
+        const phone = this.querySelector('[name="phone"]').value.trim();
+        const message = this.querySelector('[name="message"]').value.trim();
+        if (!name || !phone || !message) {
+            alert('Пожалуйста, заполните все обязательные поля.');
+            return;
+        }
+        // Проверка капчи: для каждого шага должно быть выбрано изображение с dataset.valid === 'true'
+        let stepsOk = true;
+        for (let step = 0; step < 4; step++) {
+            const stepContainer = document.querySelector(`.captcha-step[data-step="${step+1}"] .images-row`);
+            const selected = stepContainer.querySelector('.captcha-img.selected');
+            if (!selected) {
+                alert(`Пожалуйста, выберите изображение для шага ${step+1}.`);
+                stepsOk = false;
+                break;
+            }
+            const isValid = selected.dataset.valid === 'true';
+            if (!isValid) {
+                alert(`Вы выбрали неправильное изображение для шага ${step+1}. Попробуйте ещё раз или обновите изображения.`);
+                stepsOk = false;
+                break;
+            }
+        }
+        if (!stepsOk) return;
+        if (!document.getElementById('consent').checked) {
+            alert('Необходимо согласие на обработку персональных данных.');
+            return;
+        }
+
+        // Имитация отправки
+        alert('Спасибо! Ваша заявка принята. Мы свяжемся с вами в ближайшее время.');
+        this.reset();
+        // Сбросить выделение капчи
+        document.querySelectorAll('.captcha-img').forEach(img => img.classList.remove('selected'));
+        refreshAll();
+    });
+
+    // Инициализация
+    generateRandomImages();
+</script>
+</body>
+</html>

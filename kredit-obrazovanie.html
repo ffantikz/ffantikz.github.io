@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ГБПОУ КТИРНЗ — Кредит на образование с господдержкой</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Дополнительные стили для страницы кредита */
+        .breadcrumb {
+            font-size: 14px;
+            margin-bottom: 30px;
+            color: #6c8b5e;
+        }
+        .breadcrumb a {
+            color: #2d6a2f;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb span {
+            color: #1a4a1f;
+            font-weight: 500;
+        }
+
+        .credit-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .credit-header h2 {
+            font-size: 42px;
+            background: linear-gradient(135deg, #1f5e2a, #3b8c40);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 16px;
+        }
+        .credit-header p {
+            font-size: 18px;
+            max-width: 750px;
+            margin: 0 auto;
+            color: #2a3a28;
+        }
+
+        /* Карточки банков */
+        .banks-block {
+            background: linear-gradient(135deg, #eef5e9, #fefcf5);
+            border-radius: 32px;
+            padding: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .banks-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1f5425;
+            margin-bottom: 20px;
+        }
+        .bank-logos {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        .bank-item {
+            background: white;
+            padding: 12px 32px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .bank-item i {
+            font-size: 28px;
+            color: #2d6a2f;
+        }
+        .bank-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Контакты оператора */
+        .contacts-operator {
+            background: #1e3a1f;
+            color: white;
+            border-radius: 32px;
+            padding: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .contacts-operator h3 {
+            color: #ffcd4a;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .contact-lines {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .contact-line {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 18px;
+        }
+        .contact-line i {
+            font-size: 24px;
+            color: #ffcd4a;
+        }
+
+        /* Шаги */
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .step-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            background: #fefcf5;
+            border-radius: 28px;
+            padding: 24px 30px;
+            transition: 0.2s;
+            border: 1px solid #e9ede5;
+        }
+        .step-card:hover {
+            transform: translateX(8px);
+            background: white;
+            border-color: #cddfbf;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        .step-number {
+            background: linear-gradient(135deg, #2d6a2f, #4cae4f);
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+        .step-text {
+            flex: 1;
+        }
+        .step-text strong {
+            font-size: 20px;
+            color: #1f5425;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .step-text p {
+            margin: 0;
+            color: #2a3a28;
+        }
+
+        /* Изображение-иллюстрация */
+        .credit-illustration {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .credit-illustration img {
+            max-width: 100%;
+            border-radius: 32px;
+            box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .step-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .step-number {
+                margin-bottom: 10px;
+            }
+            .contact-lines {
+                flex-direction: column;
+                align-items: center;
+            }
+            .credit-header h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <h1>ГБПОУ КТИНЗ</h1>
+            <p>Колледж традиционных искусств народов Забайкалья</p>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О колледже</a>
+            <a href="programs.html">Направления</a>
+            <a href="staff.html">Коллектив</a>
+            <a href="reviews.html">Отзывы</a>
+            <a href="contact.html">Контакты</a>
+            <a href="media.html">Жизнь колледжа</a>
+            <a href="info.html">Информация</a>
+            <a href="pedagogam.html">Педагогам</a>
+        </nav>
+    </div>
+</header>
+
+<section style="padding: 60px 0;">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Главная</a> / <a href="info.html">Информация</a> / <span>Кредит на образование с господдержкой</span>
+        </div>
+
+        <div class="credit-header">
+            <h2>Кредит на образование с господдержкой</h2>
+            <p>Получайте среднее профессиональное образование, а государство погасит часть кредита за вас. Интересно? Тогда читайте наш чек-лист с пошаговым описанием действий!</p>
+        </div>
+
+        <!-- Блок с банками -->
+        <div class="banks-block">
+            <div class="banks-title">Подробности на сайтах банков, участвующих в госпрограмме:</div>
+            <div class="bank-logos">
+                <div class="bank-item"><i class="fab fa-sberbank"></i> Сбербанк</div>
+                <div class="bank-item"><i class="fas fa-university"></i> РНКБ</div>
+            </div>
+        </div>
+
+        <!-- Контакты оператора -->
+        <div class="contacts-operator">
+            <h3>Контакты оператора Проекта – Казанского филиала ИРПО</h3>
+            <div class="contact-lines">
+                <div class="contact-line"><i class="fas fa-phone-alt"></i> +7 (987) 060-02-76</div>
+                <div class="contact-line"><i class="fas fa-phone-alt"></i> +7 (987) 060-05-25</div>
+                <div class="contact-line"><i class="fas fa-envelope"></i> m.ivanova@firpo.ru</div>
+            </div>
+        </div>
+
+        <!-- Шаги получения кредита -->
+        <h3 style="font-size: 28px; margin-bottom: 20px; color:#1a4a1f;">Пошаговая инструкция</h3>
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-text"><strong>Вы определились с колледжем и программой обучения?</strong><p>Поздравляем! Это первый и важный шаг к получению образования мечты.</p></div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-text"><strong>Заключите с колледжем договор на оказание платных образовательных услуг</strong><p>Договор станет основанием для получения кредита.</p></div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-text"><strong>Подготовьте необходимые документы для банка</strong><p>Перечень документов смотрите на сайтах банков-партнеров по QR-кодам на инфографике.</p></div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-text"><strong>Приходите с подготовленными документами в офис банка или оставьте заявку на сайте</strong><p>Выберите удобный способ подачи.</p></div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <div class="step-text"><strong>Получите положительное решение от банка</strong><p>Обычно решение приходит в течение нескольких дней.</p></div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">6</div>
+                <div class="step-text"><strong>Подпишите кредитный договор с банком</strong><p>Внимательно ознакомьтесь со всеми пунктами.</p></div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">7</div>
+                <div class="step-text"><strong>Получите кредит</strong><p>Банк перечислит деньги за обучение в образовательную организацию по реквизитам, указанным в счёте на оплату.</p></div>
+            </div>
+        </div>
+
+        <!-- Красивое изображение (можно заменить на реальный файл) -->
+        <div class="credit-illustration">
+            <img src="https://xn--g1abfnx.xn--p1ai/upload/images/123.jpg" alt="Образовательный кредит" style="max-width: 300px;">
+            <p style="margin-top: 16px; color:#4a6741;">Образовательный кредит — ваш старт к успешной карьере!</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 ГБПОУ «Колледж традиционных искусств и ремёсел народов Забайкалья» (ГБПОУ КТИРНЗ)</p>
+        <p><a href="index.html">Главная</a> | <a href="about.html">О колледже</a> | <a href="info.html">Информация</a></p>
+    </div>
+</footer>
+
+<div class="to-top" id="toTopBtn"><i class="fas fa-chevron-up"></i></div>
+<script src="common.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ГБПОУ КТИРНЗ — Рекомендации педагогам</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .breadcrumb {
+            font-size: 14px;
+            margin-bottom: 30px;
+            color: #6c8b5e;
+        }
+        .breadcrumb a {
+            color: #2d6a2f;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb span {
+            color: #1a4a1f;
+            font-weight: 500;
+        }
+
+        .page-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .page-header h2 {
+            font-size: 36px;
+            color: #1f5425;
+            margin-bottom: 10px;
+        }
+        .page-header p {
+            color: #4a6741;
+            font-size: 16px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .recommendations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        .rec-card {
+            background: #fefcf5;
+            border-radius: 28px;
+            padding: 24px;
+            transition: 0.2s;
+            border: 1px solid #e9ede5;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        .rec-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.05);
+            background: white;
+            border-color: #cddfbf;
+        }
+        .rec-icon {
+            font-size: 48px;
+            flex-shrink: 0;
+        }
+        .rec-icon .fa-file-word {
+            color: #2a579a;
+        }
+        .rec-icon .fa-file-pdf {
+            color: #d4451e;
+        }
+        .rec-icon .fa-file-alt {
+            color: #2d6a2f;
+        }
+        .rec-content {
+            flex: 1;
+        }
+        .rec-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1f5425;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .rec-description {
+            font-size: 13px;
+            color: #4a6741;
+            margin-bottom: 12px;
+        }
+        .rec-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #eef2e8;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #2d6a2f;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .rec-link:hover {
+            background: #2d6a2f;
+            color: white;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            background: #eef2e8;
+            padding: 10px 24px;
+            border-radius: 40px;
+            color: #2d6a2f;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+            text-align: center;
+        }
+        .back-link:hover {
+            background: #2d6a2f;
+            color: white;
+        }
+        @media (max-width: 640px) {
+            .rec-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .rec-link {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <h1>ГБПОУ КТИНЗ</h1>
+            <p>Колледж традиционных искусств народов Забайкалья</p>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О колледже</a>
+            <a href="programs.html">Направления</a>
+            <a href="staff.html">Коллектив</a>
+            <a href="reviews.html">Отзывы</a>
+            <a href="contact.html">Контакты</a>
+            <a href="media.html">Жизнь колледжа</a>
+            <a href="info.html">Информация</a>
+            <a href="pedagogam.html">Педагогам</a>
+        </nav>
+    </div>
+</header>
+
+<section style="padding: 60px 0;">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Главная</a> / <a href="pedagogam.html">Педагогам</a> / <span>Рекомендации педагогам</span>
+        </div>
+
+        <div class="page-header">
+            <h2>Рекомендации педагогам</h2>
+            <p>Методические материалы, инструкции и полезные документы для организации образовательного процесса</p>
+        </div>
+
+        <div class="recommendations-grid">
+            <!-- Карточка 1 -->
+            <div class="rec-card">
+                <div class="rec-icon"><i class="fas fa-file-word fa-3x"></i></div>
+                <div class="rec-content">
+                    <div class="rec-title">Рекомендации по контролю за электронным и дистанционным обучением</div>
+                    <div class="rec-description">Методические указания по организации контроля успеваемости в условиях ЭО и ДОТ</div>
+                    <a href="http://nachalnoe.3dn.ru/aprill/2020/rekomendacii_po_kontrolja_za_eho_i_dot.doc" class="rec-link" target="_blank"><i class="fas fa-download"></i> Скачать (DOC)</a>
+                </div>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="rec-card">
+                <div class="rec-icon"><i class="fas fa-file-word fa-3x"></i></div>
+                <div class="rec-content">
+                    <div class="rec-title">Перечень инструментов виртуальной коммуникации</div>
+                    <div class="rec-description">Обзор сервисов и платформ для эффективного взаимодействия с обучающимися</div>
+                    <a href="http://nachalnoe.3dn.ru/aprill/2020/perechen_instrumentov_virtualnoj_kommunikacii.doc" class="rec-link" target="_blank"><i class="fas fa-download"></i> Скачать (DOC)</a>
+                </div>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="rec-card">
+                <div class="rec-icon"><i class="fas fa-file-word fa-3x"></i></div>
+                <div class="rec-content">
+                    <div class="rec-title">Указания по реализации учебных планов и программ</div>
+                    <div class="rec-description">Рекомендации по корректировке учебных планов в условиях дистанционного обучения</div>
+                    <a href="http://nachalnoe.3dn.ru/aprill/2020/ukazanija_po_realizacii_up_i_pp.doc" class="rec-link" target="_blank"><i class="fas fa-download"></i> Скачать (DOC)</a>
+                </div>
+            </div>
+
+            <!-- Карточка 4 -->
+            <div class="rec-card">
+                <div class="rec-icon"><i class="fas fa-file-pdf fa-3x"></i></div>
+                <div class="rec-content">
+                    <div class="rec-title">Порядок работы с электронным журналом</div>
+                    <div class="rec-description">Инструкция по ведению и заполнению электронного журнала успеваемости</div>
+                    <a href="http://nachalnoe.3dn.ru/aprill/2020/porjadok_raboty_s_ehlektronnym_zhurnalom.pdf" class="rec-link" target="_blank"><i class="fas fa-download"></i> Скачать (PDF)</a>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="pedagogam.html" class="back-link"><i class="fas fa-arrow-left"></i> Назад к педагогам</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 ГБПОУ «Колледж традиционных искусств и ремёсел народов Забайкалья» (ГБПОУ КТИРНЗ)</p>
+        <p><a href="index.html">Главная</a> | <a href="about.html">О колледже</a> | <a href="pedagogam.html">Педагогам</a></p>
+    </div>
+</footer>
+
+<div class="to-top" id="toTopBtn"><i class="fas fa-chevron-up"></i></div>
+<script src="common.js"></script>
+</body>
+</html>

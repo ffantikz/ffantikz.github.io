@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ГБПОУ КТИРНЗ — Горячая линия СПО</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .breadcrumb {
+            font-size: 14px;
+            margin-bottom: 30px;
+            color: #6c8b5e;
+        }
+        .breadcrumb a {
+            color: #2d6a2f;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb span {
+            color: #1a4a1f;
+            font-weight: 500;
+        }
+
+        .hotline-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1e3a1f, #2d6a2f);
+            border-radius: 48px;
+            color: white;
+        }
+        .hotline-header h2 {
+            font-size: 42px;
+            margin-bottom: 16px;
+            color: #ffcd4a;
+        }
+        .hotline-header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        .main-phone {
+            font-size: 36px;
+            font-weight: 800;
+            background: #ffcd4a;
+            color: #1e3a1f;
+            display: inline-block;
+            padding: 12px 32px;
+            border-radius: 60px;
+            margin-top: 20px;
+            letter-spacing: 1px;
+        }
+
+        .hotline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+            margin: 40px 0;
+        }
+        .hotline-card {
+            background: #fefcf5;
+            border-radius: 28px;
+            padding: 24px;
+            transition: 0.2s;
+            border: 1px solid #e9ede5;
+            display: flex;
+            flex-direction: column;
+        }
+        .hotline-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.05);
+            border-color: #cddfbf;
+            background: white;
+        }
+        .card-icon {
+            font-size: 40px;
+            color: #2d6a2f;
+            margin-bottom: 16px;
+        }
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1f5425;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .card-phone {
+            font-size: 22px;
+            font-weight: 800;
+            color: #2d6a2f;
+            margin: 12px 0 8px;
+        }
+        .card-ext {
+            font-size: 14px;
+            color: #4a6741;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .note {
+            margin-top: 30px;
+            padding: 20px;
+            background: #eef5e9;
+            border-radius: 24px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            background: #eef2e8;
+            padding: 10px 24px;
+            border-radius: 40px;
+            color: #2d6a2f;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+        .back-link:hover {
+            background: #2d6a2f;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .hotline-header h2 { font-size: 32px; }
+            .main-phone { font-size: 26px; padding: 8px 20px; }
+            .card-phone { font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <h1>ГБПОУ КТИНЗ</h1>
+            <p>Колледж традиционных искусств народов Забайкалья</p>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О колледже</a>
+            <a href="programs.html">Направления</a>
+            <a href="staff.html">Коллектив</a>
+            <a href="reviews.html">Отзывы</a>
+            <a href="contact.html">Контакты</a>
+            <a href="media.html">Жизнь колледжа</a>
+            <a href="info.html">Информация</a>
+            <a href="pedagogam.html">Педагогам</a>
+        </nav>
+    </div>
+</header>
+
+<section style="padding: 60px 0;">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Главная</a> / <a href="info.html">Информация</a> / <span>Горячая линия</span>
+        </div>
+
+        <div class="hotline-header">
+            <h2>ГОРЯЧАЯ ЛИНИЯ<br>В СИСТЕМЕ СПО</h2>
+            <p>на базе Института развития профессионального образования</p>
+            <div class="main-phone">
+                <i class="fas fa-phone-alt"></i> +7 (495) 114-55-02
+            </div>
+        </div>
+
+        <div class="hotline-grid">
+            <div class="hotline-card">
+                <div class="card-icon"><i class="fas fa-universal-access"></i></div>
+                <div class="card-title">По вопросам получения среднего профессионального образования инвалидами и лицами с ОВЗ</div>
+                <div class="card-phone">+7 (495) 114-55-02</div>
+                <div class="card-ext"><i class="fas fa-code-branch"></i> добавочный 1</div>
+            </div>
+            <div class="hotline-card">
+                <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="card-title">По вопросам мониторинга занятости выпускников СПО</div>
+                <div class="card-phone">+7 (495) 114-55-02</div>
+                <div class="card-ext"><i class="fas fa-code-branch"></i> добавочный 2</div>
+            </div>
+            <div class="hotline-card">
+                <div class="card-icon"><i class="fas fa-rocket"></i></div>
+                <div class="card-title">По вопросам функционирования центров опережающей профессиональной подготовки</div>
+                <div class="card-phone">+7 (495) 114-55-02</div>
+                <div class="card-ext"><i class="fas fa-code-branch"></i> добавочный 3</div>
+            </div>
+            <div class="hotline-card">
+                <div class="card-icon"><i class="fas fa-tools"></i></div>
+                <div class="card-title">По вопросам создания и функционирования современных мастерских</div>
+                <div class="card-phone">+7 (495) 114-55-02</div>
+                <div class="card-ext"><i class="fas fa-code-branch"></i> добавочный 4</div>
+            </div>
+            <div class="hotline-card">
+                <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="card-title">По вопросам реализации Федерального проекта «Профессионалитет»</div>
+                <div class="card-phone">+7 (495) 114-55-02</div>
+                <div class="card-ext"><i class="fas fa-code-branch"></i> добавочный 5</div>
+            </div>
+            <div class="hotline-card">
+                <div class="card-icon"><i class="fas fa-book-open"></i></div>
+                <div class="card-title">По вопросам разработки образовательных программ Федерального проекта «Профессионалитет»</div>
+                <div class="card-phone">+7 (495) 114-55-02</div>
+                <div class="card-ext"><i class="fas fa-code-branch"></i> добавочный 6</div>
+            </div>
+            <div class="hotline-card">
+                <div class="card-icon"><i class="fas fa-building"></i></div>
+                <div class="card-title">По вопросам государственной поддержки создания образовательно-производственных центров (кластеров)</div>
+                <div class="card-phone">+7 (495) 114-55-02</div>
+                <div class="card-ext"><i class="fas fa-code-branch"></i> добавочный 7</div>
+            </div>
+            <div class="hotline-card">
+                <div class="card-icon"><i class="fas fa-question-circle"></i></div>
+                <div class="card-title">По общим вопросам среднего профессионального образования</div>
+                <div class="card-phone">+7 (495) 114-55-02</div>
+                <div class="card-ext"><i class="fas fa-code-branch"></i> добавочный 8</div>
+            </div>
+            <div class="hotline-card">
+                <div class="card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                <div class="card-title">По вопросам реализации общеобразовательных дисциплин СПО</div>
+                <div class="card-phone">+7 (495) 114-55-02</div>
+                <div class="card-ext"><i class="fas fa-code-branch"></i> добавочный 9</div>
+            </div>
+        </div>
+
+        <div class="note">
+            <i class="fas fa-info-circle"></i> Горячая линия работает в рабочие дни с 9:00 до 18:00 по московскому времени. Звонок бесплатный.
+        </div>
+
+        <div style="text-align: center;">
+            <a href="info.html" class="back-link"><i class="fas fa-arrow-left"></i> Вернуться в раздел информации</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 ГБПОУ «Колледж традиционных искусств и ремёсел народов Забайкалья» (ГБПОУ КТИРНЗ)</p>
+        <p><a href="index.html">Главная</a> | <a href="about.html">О колледже</a> | <a href="info.html">Информация</a></p>
+    </div>
+</footer>
+
+<div class="to-top" id="toTopBtn"><i class="fas fa-chevron-up"></i></div>
+<script src="common.js"></script>
+</body>
+</html>

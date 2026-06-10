@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ГБПОУ КТИРНЗ — Олимпиады</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .breadcrumb {
+            font-size: 14px;
+            margin-bottom: 30px;
+            color: #6c8b5e;
+        }
+        .breadcrumb a {
+            color: #2d6a2f;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb span {
+            color: #1a4a1f;
+            font-weight: 500;
+        }
+
+        .olympiad-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .olympiad-card {
+            background: #fefcf5;
+            border-radius: 28px;
+            overflow: hidden;
+            transition: 0.25s;
+            border: 1px solid #e9ede5;
+            display: flex;
+            flex-direction: column;
+        }
+        .olympiad-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.1);
+            border-color: #cddfbf;
+            background: white;
+        }
+        .olympiad-header {
+            background: linear-gradient(135deg, #2d6a2f, #4cae4f);
+            padding: 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .olympiad-year {
+            color: rgb(0, 0, 0);
+            background: rgba(255,255,255,0.25);
+            padding: 5px 12px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .olympiad-icon {
+            font-size: 40px;
+        }
+        .olympiad-body {
+            padding: 24px;
+            flex: 1;
+        }
+        .olympiad-title {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: #1f5425;
+        }
+        .olympiad-description {
+            color: #2a3a28;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .olympiad-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: auto;
+        }
+        .olympiad-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #eef2e8;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #2d6a2f;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .olympiad-links a:hover {
+            background: #2d6a2f;
+            color: white;
+        }
+        .note {
+            margin-top: 40px;
+            padding: 20px;
+            background: #eef5e9;
+            border-radius: 24px;
+            text-align: center;
+            font-size: 14px;
+            color: #2a3a28;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <h1>ГБПОУ КТИНЗ</h1>
+            <p>Колледж традиционных искусств народов Забайкалья</p>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О колледже</a>
+            <a href="programs.html">Направления</a>
+            <a href="staff.html">Коллектив</a>
+            <a href="reviews.html">Отзывы</a>
+            <a href="contact.html">Контакты</a>
+            <a href="media.html">Жизнь колледжа</a>
+            <a href="info.html">Информация</a>
+            <a href="pedagogam.html">Педагогам</a>
+        </nav>
+    </div>
+</header>
+
+<section style="padding: 60px 0;">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Главная</a> / <a href="info.html">Информация</a> / <span>Олимпиады</span>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h2 style="font-size: 42px; background: linear-gradient(135deg, #1f5e2a, #3b8c40); background-clip: text; -webkit-background-clip: text; color: transparent;">Олимпиады</h2>
+            <p style="font-size: 18px; color: #2a3a28;">Профессиональные состязания студентов — гордость колледжа</p>
+        </div>
+
+        <div class="olympiad-grid">
+            <!-- Карточка 1 -->
+            <div class="olympiad-card">
+                <div class="olympiad-header">
+                    <span class="olympiad-icon"><i class="fas fa-utensils"></i></span>
+                    <span class="olympiad-year">2023</span>
+                </div>
+                <div class="olympiad-body">
+                    <div class="olympiad-title">Путешествие в страну кулинарии</div>
+                    <div class="olympiad-description">
+                        Региональная олимпиада профессионального мастерства среди студентов кулинарных специальностей. Наши ребята показали отличные результаты!
+                    </div>
+                    <div class="olympiad-links">
+                        <a href="olimpiada-kulinariya-2023.html "><i class="fas fa-trophy"></i> Итоги 2023</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="olympiad-card">
+                <div class="olympiad-header">
+                    <span class="olympiad-icon"><i class="fas fa-utensils"></i></span>
+                    <span class="olympiad-year">2022</span>
+                </div>
+                <div class="olympiad-body">
+                    <div class="olympiad-title">Путешествие в страну кулинарии</div>
+                    <div class="olympiad-description">
+                        В 2022 году олимпиада прошла в онлайн-формате, студенты представили видеорецепты блюд бурятской кухни.
+                    </div>
+                    <div class="olympiad-links">
+                        <a href="olimpiada-kulinariya-2022.html" class="btn-link"><i class="fas fa-trophy"></i>Задания и итоги</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="olympiad-card">
+                <div class="olympiad-header">
+                    <span class="olympiad-icon"><i class="fas fa-fire"></i></span>
+                    <span class="olympiad-year">2023</span>
+                </div>
+                <div class="olympiad-body">
+                    <div class="olympiad-title">У живого огня традиций</div>
+                    <div class="olympiad-description">
+                        Олимпиада по декоративно-прикладному искусству. Участники создавали изделия из войлока, дерева и металла.
+                    </div>
+                    <div class="olympiad-links">
+                        <a href="olimpiada-ogni-traditsiy-2023.html" class="btn-link"><i class="fas fa-trophy"></i>Задания и итоги 2023</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="note">
+            <i class="fas fa-info-circle"></i> По вопросам участия в олимпиадах обращайтесь в учебную часть колледжа. Архив заданий и протоколов пополняется.
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 ГБПОУ «Колледж традиционных искусств и ремёсел народов Забайкалья» (ГБПОУ КТИРНЗ)</p>
+        <p><a href="index.html">Главная</a> | <a href="about.html">О колледже</a> | <a href="info.html">Информация</a></p>
+    </div>
+</footer>
+
+<div class="to-top" id="toTopBtn"><i class="fas fa-chevron-up"></i></div>
+<script src="common.js"></script>
+</body>
+</html>

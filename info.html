@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ГБПОУ КТИРНЗ — Информация</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Дополнительные стили для страницы информации */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .info-card {
+            background: #fefcf5;
+            border-radius: 28px;
+            padding: 30px 24px;
+            transition: 0.25s ease;
+            border: 1px solid #e9ede5;
+            text-decoration: none;
+            color: #1e2a1f;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .info-card:hover {
+            transform: translateY(-6px);
+            background: white;
+            border-color: #cddfbf;
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.1);
+        }
+        .info-icon {
+            font-size: 42px;
+            color: #2d6a2f;
+        }
+        .info-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0;
+            color: #1f5425;
+        }
+        .info-card p {
+            font-size: 14px;
+            color: #4a6741;
+            margin: 0;
+        }
+        .breadcrumb {
+            font-size: 14px;
+            margin-bottom: 30px;
+            color: #6c8b5e;
+        }
+        .breadcrumb a {
+            color: #2d6a2f;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb span {
+            color: #1a4a1f;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <h1>ГБПОУ КТИНЗ</h1>
+            <p>Колледж традиционных искусств народов Забайкалья</p>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О колледже</a>
+            <a href="programs.html">Направления</a>
+            <a href="staff.html">Коллектив</a>
+            <a href="reviews.html">Отзывы</a>
+            <a href="contact.html">Контакты</a>
+            <a href="media.html">Жизнь колледжа</a>
+            <a href="info.html">Информация</a>
+            <a href="pedagogam.html">Педагогам</a>
+        </nav>
+    </div>
+</header>
+
+<section style="padding: 60px 0;">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Главная</a> / <span>Информация</span>
+        </div>
+        <h2 style="text-align: left; margin-bottom: 20px;">Информация</h2>
+        <p style="margin-bottom: 40px; color: #4a6741;">Актуальные сведения о колледже: история, достижения, олимпиады, меры поддержки и полезные ресурсы.</p>
+
+        <div class="info-grid">
+            <a href="ob-istorii.html" class="info-card">
+                <div class="info-icon"><i class="fas fa-landmark"></i></div>
+                <h3>Об истории колледжа</h3>
+                <p>Как создавался и развивался колледж традиционных искусств.</p>
+            </a>
+            <a href="kredit-obrazovanie.html" class="info-card">
+                <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
+                <h3>Кредит на образование с господдержкой</h3>
+                <p>Условия льготного образовательного кредитования.</p>
+            </a>
+            <a href="goryachaya-liniya.html" class="info-card">
+                <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                <h3>Горячая линия</h3>
+                <p>Телефоны для связи по вопросам поступления и обучения.</p>
+            </a>
+            <a href="olimpiady.html" class="info-card">
+                <div class="info-icon"><i class="fas fa-trophy"></i></div>
+                <h3>Олимпиады</h3>
+                <p>Результаты участия студентов в профессиональных олимпиадах.</p>
+            </a>
+            <a href="noko.html" class="info-card">
+                <div class="info-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Независимая оценка качества образования</h3>
+                <p>Результаты проверок и отзывы экспертов.</p>
+            </a>
+            <a href="antiterror.html" class="info-card">
+                <div class="info-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Антитеррористическое просвещение</h3>
+                <p>Памятки, инструкции и меры безопасности.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 ГБПОУ «Колледж традиционных искусств и ремёсел народов Забайкалья» (ГБПОУ КТИРНЗ)</p>
+        <p><a href="index.html">Главная</a> | <a href="about.html">О колледже</a> | <a href="info.html">Информация</a></p>
+    </div>
+</footer>
+
+<div class="to-top" id="toTopBtn"><i class="fas fa-chevron-up"></i></div>
+<script src="common.js"></script>
+</body>
+</html>

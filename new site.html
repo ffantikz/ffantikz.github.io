@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ГБПОУ КТИРНЗ — Колледж традиционных искусств и ремёсел народов Забайкалья</title>
+    <!-- Подключаем современные шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (бесплатные иконки) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ===== БАЗА ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            color: #1e2a1f;
+            background-color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* ===== АНИМАЦИЯ ПРИ СКРОЛЛЕ (появление) ===== */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== ШАПКА ===== */
+        .header {
+            background: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.96);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #1f5e2a, #3b8c40);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: -0.3px;
+        }
+
+        .logo p {
+            font-size: 13px;
+            color: #4a6741;
+            font-weight: 500;
+        }
+
+        .nav {
+    display: flex;
+    gap: 30px;
+    background: linear-gradient(135deg, #30470fb2 0%, #54b35691 100%);
+    border-radius: 15px;
+}
+
+        .nav a {
+    color: rgb(6, 65, 14);
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    position: relative;  /* Важно! Для позиционирования ::after */
+}
+
+        .nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background: #2d6a2f;
+            border-radius: 2px;
+            transition: width 0.25s ease;
+        }
+
+.nav a:hover {
+    background: rgba(255, 255, 255, 0.411);
+    color: rgb(229, 255, 0);
+}
+
+        .nav a:hover::after {
+            width: 100%;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(107deg, rgba(30, 60, 25, 0.92) 0%, rgba(50, 90, 40, 0.85) 100%), url('https://i.pinimg.com/1200x/39/16/3c/39163c4594d8f506d39d9e83da7d42ff.jpg');
+            background-size: cover;
+            background-position: center 30%;
+            padding: 110px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 52px;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 680px;
+            margin: 0 auto 32px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #ffcd4a;
+            color: #1e3a1e;
+            padding: 14px 34px;
+            font-weight: 700;
+            border-radius: 40px;
+            transition: 0.25s;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn i {
+            font-size: 18px;
+        }
+
+        .btn:hover {
+            background: #ffc107;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ===== СЕКЦИИ ===== */
+        section {
+            padding: 80px 0;
+        }
+
+        section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 38px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 56px;
+            color: #1a4a1f;
+            position: relative;
+        }
+
+        section h2:after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 4px;
+            background: #ffcd4a;
+            margin: 16px auto 0;
+            border-radius: 4px;
+        }
+
+        /* О КОЛЛЕДЖЕ */
+        .about {
+            background: #fefcf5;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 0.9fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #2a3a28;
+        }
+
+        .about-text ul li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .about-text ul li i {
+            color: #2d6a2f;
+            font-size: 20px;
+            width: 24px;
+        }
+
+        .stats-row {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 24px;
+            padding: 28px 20px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 25px 35px rgba(45, 106, 47, 0.1);
+        }
+
+        .stat-number {
+            font-size: 54px;
+            font-weight: 800;
+            color: #2d6a2f;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* НАПРАВЛЕНИЯ */
+        .programs {
+            background: #ffffff;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 32px;
+        }
+
+        .program-card {
+            background: #fafaf7;
+            border-radius: 28px;
+            padding: 32px 26px;
+            transition: 0.25s ease;
+            border: 1px solid #e9ede5;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02);
+        }
+
+        .program-card:hover {
+            transform: translateY(-8px);
+            background: white;
+            border-color: #cddfbf;
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.1);
+        }
+
+        .program-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .program-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1f5425;
+        }
+
+        .program-card ul li {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .program-card ul li i {
+            color: #3b8c40;
+            font-size: 14px;
+            margin-top: 3px;
+        }
+
+        /* КОЛЛЕКТИВ */
+        .staff {
+            background: #fefcf5;
+        }
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 35px;
+        }
+
+        .staff-card {
+            background: white;
+            border-radius: 32px;
+            text-align: center;
+            padding: 30px 18px 24px;
+            transition: 0.2s;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
+            border: 1px solid #eef2e8;
+        }
+
+        .staff-card:hover {
+            transform: translateY(-6px);
+            border-color: #cfe2c3;
+            box-shadow: 0 18px 32px rgba(0, 0, 0, 0.08);
+        }
+
+        .staff-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 18px;
+            border: 4px solid #ffcd4a;
+            box-shadow: 0 8px 14px rgba(0, 0, 0, 0.05);
+        }
+
+        .staff-role {
+            background: #e6f0e3;
+            color: #2d6a2f;
+            font-weight: 700;
+            font-size: 12px;
+            padding: 4px 16px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .staff-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        /* ОТЗЫВЫ */
+        .reviews {
+            background: white;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .review-card {
+            background: #fafaf5;
+            border-radius: 28px;
+            padding: 28px;
+            transition: 0.2s;
+            border-left: 5px solid #ffcd4a;
+        }
+
+        .review-author {
+            font-weight: 800;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .review-author i {
+            color: #ffcd4a;
+        }
+
+        .review-date {
+            font-size: 12px;
+            color: #7b8a72;
+            margin: 4px 0 14px;
+        }
+
+        /* МЕДИАТЕКА (улучшенный слайдер) */
+        .media-slider {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            border-radius: 28px;
+        }
+
+        .slider-track {
+            display: flex;
+            gap: 24px;
+            width: fit-content;
+            animation: scroll 32s linear infinite;
+        }
+
+        .media-slider:hover .slider-track {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .slider-item {
+            flex: 0 0 300px;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.25s;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .slider-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+
+        .slider-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 16px 28px rgba(0, 0, 0, 0.12);
+        }
+
+        .slider-caption {
+            padding: 14px;
+            font-weight: 500;
+            font-size: 13px;
+            background: white;
+        }
+
+        /* КОНТАКТЫ */
+        .contact {
+            background: #1e3a1f;
+            color: white;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact h2:after {
+            background: #ffcd4a;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .contact-item {
+            margin-bottom: 28px;
+        }
+
+        .contact-item strong {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+            color: #ffcd4a;
+        }
+
+        .contact-item a {
+            color: #ffcd4a;
+            text-decoration: underline;
+        }
+
+        .map {
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+            height: 340px;
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* ФУТЕР */
+        .footer {
+            background: #0f2a11;
+            color: #c6e0c2;
+            text-align: center;
+            padding: 32px;
+            font-size: 14px;
+        }
+
+        /* КНОПКА НАВЕРХ */
+        .to-top {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #2d6a2f;
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.2s;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+            z-index: 99;
+        }
+
+        .to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .h2 {
+            color: aliceblue;
+        }
+        /* АДАПТИВ */
+        @media (max-width: 992px) {
+            .about-content, .contact-content {
+                grid-template-columns: 1fr;
+            }
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h2 {
+                font-size: 38px;
+            }
+            .header-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            section {
+                padding: 60px 0;
+            }
+            section h2 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .programs-grid, .staff-grid {
+                grid-template-columns: 1fr;
+            }
+            .slider-item {
+                flex: 0 0 260px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <h1>ГБПОУ КТИНЗ</h1>
+            <p>Колледж традиционных искусств народов Забайкалья</p>
+        </div>
+        <nav class="nav" id="navMenu">
+            <a href="#about">О колледже</a>
+            <a href="#programs">Направления</a>
+            <a href="#staff">Коллектив</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#contact">Контакты</a>
+            <a href="#media">Жизнь колледжа</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h2 class="h2">Сохраняем традиции,<br> передаём ремёсла</h2>
+        <p>Профессиональное образование в области декоративно-прикладного искусства и народных промыслов Республики Бурятия</p>
+        <a href="#programs" class="btn"><i class="fas fa-graduation-cap"></i> Узнать программы обучения</a>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="container">
+        <h2>О колледже</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>ГБПОУ «Колледж традиционных искусств народов Забайкалья» (ГБПОУ КТИНЗ) является государственным профессиональным образовательным учреждением, расположенным в селе Иволгинск Иволгинского района Республики Бурятия.</p>
+                <p><strong>Ключевая миссия:</strong> сохранение народных традиций и передача ремёсел прадедов молодому поколению в условиях современной практико-ориентированной образовательной среды.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> 2 специальности среднего звена</li>
+                    <li><i class="fas fa-check-circle"></i> 5 профессий для квалифицированных рабочих</li>
+                    <li><i class="fas fa-check-circle"></i> 70% трудоустройство выпускников</li>
+                    <li><i class="fas fa-check-circle"></i> Победитель Всероссийских конкурсов</li>
+                </ul>
+            </div>
+            <div class="stats-row">
+                <div class="stat-card"><div class="stat-number">80+</div><div>лет истории СПО</div></div>
+                <div class="stat-card"><div class="stat-number">20+</div><div>преподавателей</div></div>
+                <div class="stat-card"><div class="stat-number">500+</div><div>выпускников</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="programs" class="programs">
+    <div class="container">
+        <h2>Направления обучения</h2>
+        <div class="programs-grid">
+            <div class="program-card"><div class="program-icon">🪓</div><h3>Художественные изделия из дерева</h3><ul><li><i class="fas fa-leaf"></i> Резьба, точение, орнамент</li><li><i class="fas fa-pencil-ruler"></i> Эскизирование и чертежи</li><li><i class="fas fa-gem"></i> Народные промыслы</li></ul></div>
+            <div class="program-card"><div class="program-icon">🔩</div><h3>Художественные изделия из металла</h3><ul><li><i class="fas fa-wrench"></i> Ремонт техники</li><li><i class="fas fa-tractor"></i> Обслуживание тракторов</li><li><i class="fas fa-hard-hat"></i> Техническая безопасность</li></ul></div>
+            <div class="program-card"><div class="program-icon">🎨</div><h3>Декоративно-прикладное искусство</h3><ul><li><i class="fas fa-palette"></i> Академическая живопись</li><li><i class="fas fa-history"></i> История промыслов</li><li><i class="fas fa-layer-group"></i> Композиция и цвет</li></ul></div>
+            <div class="program-card"><div class="program-icon">🧵</div><h3>Конструирование и моделирование одежды</h3><ul><li><i class="fas fa-tshirt"></i> Разработка лекал</li><li><i class="fas fa-chart-line"></i> Модные тенденции</li><li><i class="fas fa-cut"></i> Оптимизация раскроя</li></ul></div>
+            <div class="program-card"><div class="program-icon">👩‍🍳</div><h3>Повар, кондитер</h3><ul><li><i class="fas fa-utensils"></i> Высокая кухня</li><li><i class="fas fa-calendar-alt"></i> Контроль сроков</li><li><i class="fas fa-cake"></i> Кондитерское мастерство</li></ul></div>
+            <div class="program-card"><div class="program-icon">🚜</div><h3>Эксплуатация сельхозтехники</h3><ul><li><i class="fas fa-microchip"></i> Монтаж и обкатка</li><li><i class="fas fa-tachometer-alt"></i> Настройка машин</li><li><i class="fas fa-seedling"></i> Уход за культурами</li></ul></div>
+        </div>
+    </div>
+</section>
+
+<section id="staff" class="staff">
+    <div class="container">
+        <h2>Наш коллектив</h2>
+        <div class="staff-grid">
+            <div class="staff-card"><img class="staff-img" src="https://xn--g1abfnx.xn--p1ai/docs/sveden/managers/thumbs/thumb_crop_200_250_rucovodstvo_foto_1738745087001.jpg?d=2025-02-05%2013:44:47"><div class="staff-role">Директор</div><h3>Сагаев Наян Цырендоржиевич</h3><p>Директор образовательной организации</p></div>
+            <div class="staff-card"><img class="staff-img" src="https://xn--g1abfnx.xn--p1ai/docs/sveden/managers/thumbs/thumb_crop_200_250_rucovodstvozam_foto_1738745776001.jpg?d=2025-02-05%2013:56:16"><div class="staff-role">Заместитель директора</div><h3>Гулгенова Алена Дашиевна</h3><p>Мастер производственного обучения</p></div>
+            <div class="staff-card"><img class="staff-img" src="https://xn--g1abfnx.xn--p1ai/docs/sveden/employees/thumbs/thumb_crop_200_250_teachingstaff_foto_1738746997001.jpg?d=2025-02-05%2014:16:37"><div class="staff-role">Преподаватель</div><h3>Тудупова Жаргалма Кимовна</h3><p>Специальные дисциплины</p></div>
+            <div class="staff-card"><img class="staff-img" src="https://xn--g1abfnx.xn--p1ai/docs/sveden/employees/thumbs/thumb_crop_200_250_teachingstaff_foto_1738747513001.jpg?d=2025-02-05%2014:25:13"><div class="staff-role">Преподаватель</div><h3>Харжеев Альберт Николаевич</h3><p>Специальные дисциплины</p></div>
+            <div class="staff-card"><img class="staff-img" src="https://xn--g1abfnx.xn--p1ai/docs/sveden/employees/thumbs/thumb_crop_200_250_teachingstaff_foto_1738746746001.jpg?d=2025-02-05%2014:12:26"><div class="staff-role">Мастер</div><h3>Аюшеева София Базаржаповна</h3><p>Производственное обучение</p></div>
+            <div class="staff-card"><img class="staff-img" src="https://xn--g1abfnx.xn--p1ai/docs/sveden/employees/thumbs/thumb_crop_200_250_teachingstaff_foto_1738746802001.jpg?d=2025-02-05%2014:13:22"><div class="staff-role">Мастер</div><h3>Цыбикова Светлана Нимбуевна</h3><p>Производственное обучение</p></div>
+            <div class="staff-card"><img class="staff-img" src="https://xn--g1abfnx.xn--p1ai/docs/sveden/employees/thumbs/thumb_crop_200_250_teachingstaff_foto_1738748014001.jpg?d=2025-02-05%2014:33:34"><div class="staff-role">Педагог</div><h3>Доржиева Сэсэг Доржиевна</h3><p>Советник по воспитанию</p></div>
+            <div class="staff-card"><img class="staff-img" src="https://xn--g1abfnx.xn--p1ai/docs/sveden/employees/thumbs/thumb_crop_200_250_teachingstaff_foto_1738798519001.jpg?d=2025-02-06%2004:35:19"><div class="staff-role">Педагог</div><h3>Цыденова Наталья Борисовна</h3><p>Социальный педагог</p></div>
+        </div>
+    </div>
+</section>
+
+<section id="reviews" class="reviews">
+    <div class="container">
+        <h2>Наши выпускники о нас</h2>
+        <div class="reviews-grid">
+            <div class="review-card"><div class="review-author"><i class="fas fa-user-circle"></i> Зандан Дугаров</div><div class="review-date">19.11.2021</div><p>Выражаем благодарность вашему коллективу за проведение обучения наших сотрудников и организацию их аттестации. Подготовка проводилась на высоком профессиональном уровне!</p></div>
+            <div class="review-card"><div class="review-author"><i class="fas fa-user-circle"></i> Кирилл</div><div class="review-date">12.01.2021</div><p>Продолжаю обучаться в вашем центре и хочу сказать, что делаю это с огромным удовольствием. Очень приветливо встретили, всё подробно рассказали!</p></div>
+            <div class="review-card"><div class="review-author"><i class="fas fa-user-circle"></i> Валентина</div><div class="review-date">27.06.2020</div><p>Центр для тех, кто хочет получить знания быстро, качественно и недорого. Все понравилось!</p></div>
+            <div class="review-card"><div class="review-author"><i class="fas fa-user-circle"></i> Сергей</div><div class="review-date">12.04.2020</div><p>Рекомендую всем, кто ценит своё время! Удивили сроки от прохождения обучения до получения аттестаций.</p></div>
+        </div>
+    </div>
+</section>
+
+<section id="media" class="media" style="background:#ffffff;">
+    <div class="container">
+        <h2>Медиатека</h2>
+        <p style="text-align:center; margin-bottom:30px; color:#4a5e42;">Фотографии из жизни колледжа, мастерских и выставок</p>
+        <div class="media-slider">
+            <div class="slider-track">
+                <!-- 8 оригиналов -->
+                <div class="slider-item"><img src="https://xn--g1abfnx.xn--p1ai/upload/images/gallery/51/thumbs/thumb_crop_210_150_JbRsXq6sJVfHQF_dOs4gR8SVeJYwuKapwbVmMOc8W_fOfnxl0a99bwarF_WTbnmoCeS7TGtdPJodUk3g_0tEjOkn.jpg?t=0"><div class="slider-caption">Войлок<br>30 января 2026</div></div>
+                <div class="slider-item"><img src="https://xn--g1abfnx.xn--p1ai/upload/images/gallery/50/thumbs/thumb_crop_210_150_photo_2025-12-10_15-32-53.jpg?t=1765352401"><div class="slider-caption">Графический дизайн<br>10 декабря 2025</div></div>
+                <div class="slider-item"><img src="https://xn--g1abfnx.xn--p1ai/upload/images/gallery/covers/thumbs/thumb_crop_210_150_cover_49.jpg?t=0"><div class="slider-caption">Путешествие в Иркутск<br>7 ноября 2023</div></div>
+                <div class="slider-item"><img src="https://xn--g1abfnx.xn--p1ai/upload/images/gallery/covers/thumbs/thumb_crop_210_150_cover_48.jpg?t=0"><div class="slider-caption">День Бурятского языка<br>30 октября 2023</div></div>
+                <div class="slider-item"><img src="https://xn--g1abfnx.xn--p1ai/upload/images/gallery/covers/thumbs/thumb_crop_210_150_cover_46.jpg?t=0"><div class="slider-caption">Выставка Эдуарда Куклина<br>24 октября 2023</div></div>
+                <div class="slider-item"><img src="https://xn--g1abfnx.xn--p1ai/upload/images/gallery/covers/thumbs/thumb_crop_210_150_cover_47.jpg?t=0"><div class="slider-caption">Неделя обслуживания<br>24 октября 2023</div></div>
+                <div class="slider-item"><img src="https://xn--g1abfnx.xn--p1ai/upload/images/gallery/45/1s.jpg"><div class="slider-caption">Поездка в Тарбагатай<br>20 октября 2023</div></div>
+                <div class="slider-item"><img src="https://xn--g1abfnx.xn--p1ai/upload/images/gallery/43/os6.jpg"><div class="slider-caption">Неделя сельхозотделения<br>16 октября 2023</div></div>
+                <!-- дубликаты для бесконечности -->
+                <div class="slider-item"><img src="https://xn--g1abfnx.xn--p1ai/upload/images/gallery/51/thumbs/thumb_crop_210_150_JbRsXq6sJVfHQF_dOs4gR8SVeJYwuKapwbVmMOc8W_fOfnxl0a99bwarF_WTbnmoCeS7TGtdPJodUk3g_0tEjOkn.jpg?t=0"><div class="slider-caption">Войлок<br>30 января 2026</div></div>
+                <div class="slider-item"><img src="https://xn--g1abfnx.xn--p1ai/upload/images/gallery/50/thumbs/thumb_crop_210_150_photo_2025-12-10_15-32-53.jpg?t=1765352401"><div class="slider-caption">Графический дизайн<br>10 декабря 2025</div></div>
+                <div class="slider-item"><img src="https://xn--g1abfnx.xn--p1ai/upload/images/gallery/covers/thumbs/thumb_crop_210_150_cover_49.jpg?t=0"><div class="slider-caption">Путешествие в Иркутск<br>7 ноября 2023</div></div>
+                <div class="slider-item"><img src="https://xn--g1abfnx.xn--p1ai/upload/images/gallery/covers/thumbs/thumb_crop_210_150_cover_48.jpg?t=0"><div class="slider-caption">День Бурятского языка<br>30 октября 2023</div></div>
+                <div class="slider-item"><img src="https://xn--g1abfnx.xn--p1ai/upload/images/gallery/covers/thumbs/thumb_crop_210_150_cover_46.jpg?t=0"><div class="slider-caption">Выставка Эдуарда Куклина<br>24 октября 2023</div></div>
+                <div class="slider-item"><img src="https://xn--g1abfnx.xn--p1ai/upload/images/gallery/covers/thumbs/thumb_crop_210_150_cover_47.jpg?t=0"><div class="slider-caption">Неделя обслуживания<br>24 октября 2023</div></div>
+                <div class="slider-item"><img src="https://xn--g1abfnx.xn--p1ai/upload/images/gallery/45/1s.jpg"><div class="slider-caption">Поездка в Тарбагатай<br>20 октября 2023</div></div>
+                <div class="slider-item"><img src="https://xn--g1abfnx.xn--p1ai/upload/images/gallery/43/os6.jpg"><div class="slider-caption">Неделя сельхозотделения<br>16 октября 2023</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Контакты</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item"><strong><i class="fas fa-map-marker-alt"></i> Адрес:</strong><p>671050, Республика Бурятия, Иволгинский район, с. Иволгинск, улица Ленина, 11</p></div>
+                <div class="contact-item"><strong><i class="fas fa-globe"></i> Сайт:</strong><p><a href="https://xn--g1abfnx.xn--p1ai/">ктинз.рф</a></p></div>
+                <div class="contact-item"><strong><i class="fas fa-envelope"></i> Email:</strong><p>ktinz@govrb.ru</p></div>
+                <div class="contact-item"><strong><i class="fas fa-clock"></i> Режим работы:</strong><p>Пн–Пт: 08:00–16:00, обед: 12:00–13:00</p></div>
+            </div>
+            <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ll=107.271822%2C51.744686&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoyMTEwODMwOTk3EsoB0KDQvtGB0YHQuNGPLCDQoNC10YHQv9GD0LHQu9C40LrQsCDQkdGD0YDRj9GC0LjRjywg0JjQstC-0LvQs9C40L3RgdC60LjQuSDRgNCw0LnQvtC9LCDRgdC10LvRjNGB0LrQvtC1INC_0L7RgdC10LvQtdC90LjQtSDQmNCy0L7Qu9Cz0LjQvdGB0LrQvtC1LCDRgdC10LvQviDQmNCy0L7Qu9Cz0LjQvdGB0LosINGD0LvQuNGG0LAg0JvQtdC90LjQvdCwLCAxMSIKDQiL1kIVpPpOQg%2C%2C&source=serp_navig&z=18.4" allowfullscreen></iframe></div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 ГБПОУ «Колледж традиционных искусств и ремёсел народов Забайкалья» (ГБПОУ КТИРНЗ)</p>
+        <p>Упрощенная версия</p>
+    </div>
+</footer>
+
+<div class="to-top" id="toTopBtn"><i class="fas fa-chevron-up"></i></div>
+
+<script>
+    // Плавное появление элементов при скролле
+    const fadeElements = document.querySelectorAll('.program-card, .staff-card, .review-card, .stat-card, .about-text');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+    fadeElements.forEach(el => {
+        el.classList.add('fade-up');
+        observer.observe(el);
+    });
+
+    // Кнопка "наверх"
+    const toTopBtn = document.getElementById('toTopBtn');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) toTopBtn.classList.add('show');
+        else toTopBtn.classList.remove('show');
+    });
+    toTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Активная ссылка в меню при скролле
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav a');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            if (scrollY >= sectionTop) current = section.getAttribute('id');
+        });
+        navLinks.forEach(link => {
+            link.style.color = '';
+            link.style.fontWeight = '';
+            if (link.getAttribute('href') === `#${current}`) {
+                link.style.color = '#2d6a2f';
+                link.style.fontWeight = '700';
+            } else {
+                link.style.color = '#2c3e2b';
+                link.style.fontWeight = '500';
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ГБПОУ КТИРНЗ — Сайты педагогов</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .breadcrumb {
+            font-size: 14px;
+            margin-bottom: 30px;
+            color: #6c8b5e;
+        }
+        .breadcrumb a {
+            color: #2d6a2f;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb span {
+            color: #1a4a1f;
+            font-weight: 500;
+        }
+
+        .page-header {
+            margin-bottom: 30px;
+        }
+        .page-header h2 {
+            font-size: 36px;
+            color: #1f5425;
+            margin-bottom: 10px;
+        }
+        .page-header p {
+            color: #4a6741;
+            font-size: 16px;
+        }
+
+        /* Таблица */
+        .teachers-table-wrapper {
+            background: #fefcf5;
+            border-radius: 32px;
+            padding: 20px;
+            overflow-x: auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            border: 1px solid #e9ede5;
+        }
+        .teachers-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Inter', sans-serif;
+            min-width: 600px;
+        }
+        .teachers-table th {
+            background: linear-gradient(135deg, #2d6a2f, #4cae4f);
+            color: white;
+            padding: 16px 12px;
+            font-weight: 700;
+            font-size: 16px;
+            text-align: left;
+        }
+        .teachers-table td {
+            padding: 14px 12px;
+            border-bottom: 1px solid #e0e8da;
+            font-size: 14px;
+            color: #1e2a1f;
+            vertical-align: top;
+        }
+        .teachers-table tr:last-child td {
+            border-bottom: none;
+        }
+        .teachers-table tr:hover {
+            background: #f0f5ec;
+        }
+        .teachers-table a {
+            color: #2d6a2f;
+            text-decoration: none;
+            font-weight: 500;
+            word-break: break-all;
+        }
+        .teachers-table a:hover {
+            color: #d4451e;
+            text-decoration: underline;
+        }
+        .teacher-name {
+            font-weight: 700;
+            color: #1f5425;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            background: #eef2e8;
+            padding: 10px 24px;
+            border-radius: 40px;
+            color: #2d6a2f;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+        .back-link:hover {
+            background: #2d6a2f;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .teachers-table th, .teachers-table td {
+                padding: 10px 8px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <h1>ГБПОУ КТИНЗ</h1>
+            <p>Колледж традиционных искусств народов Забайкалья</p>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О колледже</a>
+            <a href="programs.html">Направления</a>
+            <a href="staff.html">Коллектив</a>
+            <a href="reviews.html">Отзывы</a>
+            <a href="contact.html">Контакты</a>
+            <a href="media.html">Жизнь колледжа</a>
+            <a href="info.html">Информация</a>
+            <a href="pedagogam.html">Педагогам</a>
+        </nav>
+    </div>
+</header>
+
+<section style="padding: 60px 0;">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Главная</a> / <a href="pedagogam.html">Педагогам</a> / <span>Сайты педагогов</span>
+        </div>
+
+        <div class="page-header">
+            <h2>Сайты педагогов</h2>
+            <p>Персональные страницы, портфолио и профессиональные ресурсы преподавателей колледжа</p>
+        </div>
+
+        <div class="teachers-table-wrapper">
+            <table class="teachers-table">
+                <thead>
+                    <tr>
+                        <th>ФИО педагога</th>
+                        <th>УД, МДК (дисциплины / группы)</th>
+                        <th>Ссылка на сайт / ресурс</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="teacher-name">Аюшеева С.Б.</td><td>ПП в группе 241</td><td><a href="https://nsportal.ru/ayusheeva-sofiya-bazarzhapovna" target="_blank">nsportal.ru/ayusheeva-sofiya-bazarzhapovna</a></td></tr>
+                    <tr><td class="teacher-name">Бадуева Т.А.</td><td>ПМ в группах 0121, 0131, 0141</td><td><a href="https://nsportal.ru/tatyana-badueva" target="_blank">nsportal.ru/tatyana-badueva</a></td></tr>
+                    <tr><td class="teacher-name">Будаева Д.Д.</td><td>Иностранный язык</td><td><a href="https://vk.com/club194526614" target="_blank">vk.com/club194526614</a> <br> Viber +79834304729</td></tr>
+                    <tr><td class="teacher-name">Будаева Ж.Н.</td><td>Право, Правовое обеспечение профессиональной деятельности</td><td><a href="https://vk.com/club194341645" target="_blank">vk.com/club194341645</a></td></tr>
+                    <tr><td class="teacher-name">Будажапова Н.Л.</td><td>ПМ в группах 112, 0141</td><td><a href="https://vk.com/club194147186" target="_blank">vk.com/club194147186</a></td></tr>
+                    <tr><td class="teacher-name">Доржиева С.Д</td><td>Русский язык, Литература</td><td><a href="https://vk.com/club194024182" target="_blank">vk.com/club194024182</a></td></tr>
+                    <tr><td class="teacher-name">Дугарова М.Н.</td><td>ПМ в группах 421, 431</td><td><a href="https://nsportal.ru/dugarova-mn" target="_blank">nsportal.ru/dugarova-mn</a></td></tr>
+                    <tr><td class="teacher-name">Жабуева О.Ж.</td><td>Цветоведение, ДПИ, Пластическая анатомия</td><td><a href="https://ochirmazhabueva.wixsite.com/mysite#" target="_blank">ochirmazhabueva.wixsite.com/mysite</a></td></tr>
+                    <tr><td class="teacher-name">Жамсоева И.М.</td><td>Физическая культура</td><td><a href="https://vk.com/wall-194526474_2" target="_blank">vk.com/wall-194526474_2</a></td></tr>
+                    <tr><td class="teacher-name">Жамсаранова С.Н.</td><td>Химия, география, экология</td><td><a href="https://vk.com/club194067240" target="_blank">vk.com/club194067240</a><br><a href="https://nsportal.ru/zhamsaranova-svetlana-nimaevna" target="_blank">nsportal.ru/zhamsaranova-svetlana-nimaevna</a></td></tr>
+                    <tr><td class="teacher-name">Мункуева С.А.</td><td>Экономические и организационно-правовые основы проф.деятельности</td><td><a href="https://nsportal.ru/munkueva-svetlana-amgalanovna" target="_blank">nsportal.ru/munkueva-svetlana-amgalanovna</a><br><a href="http://vk.com/id286586021" target="_blank">vk.com/id286586021</a></td></tr>
+                    <tr><td class="teacher-name">Пашинова Л.Н.</td><td>Физика, информатика</td><td><a href="https://vk.com/club194079479" target="_blank">vk.com/club194079479</a></td></tr>
+                    <tr><td class="teacher-name">Перевалов В.М.</td><td>ПМ в группе 0221</td><td><a href="https://multiurok.ru/index.php/id11044927/activity/" target="_blank">multiurok.ru/index.php/id11044927/activity/</a></td></tr>
+                    <tr><td class="teacher-name">Строгонова Д.Ю.</td><td>ПМ в группах 221, 431</td><td><a href="https://nsportal.ru/mihaylova-diana-yurevna" target="_blank">nsportal.ru/mihaylova-diana-yurevna</a></td></tr>
+                    <tr><td class="teacher-name">Тубанова Н.В.</td><td>ПМ в группе 211</td><td><a href="https://nsportal.ru/tubanova-nadezhda-vladimirovna" target="_blank">nsportal.ru/tubanova-nadezhda-vladimirovna</a></td></tr>
+                    <tr><td class="teacher-name">Тудупова Ж.К.</td><td>Математика, информатика</td><td><a href="https://vk.com/club194043907" target="_blank">vk.com/club194043907</a><br><a href="https://infourok.ru/user/sodnomova-zhargalma-kimovna" target="_blank">infourok.ru/user/sodnomova-zhargalma-kimovna</a></td></tr>
+                    <tr><td class="teacher-name">Харжеев А.Н.</td><td>Материаловедение, ПМ в группе 0231</td><td><a href="http://avtoscoolkharzheeva.ru/about" target="_blank">avtoscoolkharzheeva.ru/about</a></td></tr>
+                    <tr><td class="teacher-name">Цыбикова С.Н.</td><td>Биология, основы зоотехнии</td><td><a href="https://multiurok.ru/SvetaTsybikova/files" target="_blank">multiurok.ru/SvetaTsybikova/files</a></td></tr>
+                    <tr><td class="teacher-name">Батуева А. Б.</td><td>История, Обществознание, Право, Правовое обеспечение профессиональной деятельности</td><td><a href="https://nsportal.ru/batueva-albina-badmaevna" target="_blank">nsportal.ru/batueva-albina-badmaevna</a></td></tr>
+                    <tr><td class="teacher-name">Ванданова О.В.</td><td>МДК 0201 Технология кулинарного приготовления пищи и контроль качества блюд</td><td><a href="https://infourok.ru/user/vandanova-olga-valerevna" target="_blank">infourok.ru/user/vandanova-olga-valerevna</a></td></tr>
+                    <tr><td class="teacher-name">Раднаева О.Б.</td><td>Иностранный язык</td><td>—</td></tr>
+                    <tr><td class="teacher-name">Дугданова Х.Л.</td><td>История, Обществознание, Право, Правовое обеспечение профессиональной деятельности</td><td><a href="https://vk.com/id528737829" target="_blank">vk.com/id528737829</a></td></tr>
+                    <tr><td class="teacher-name">Васин А.И.</td><td>ОБЖ, БЖД</td><td><a href="https://nsportal.ru/vasin-aleksey-ivanovich" target="_blank">nsportal.ru/vasin-aleksey-ivanovich</a></td></tr>
+                    <tr><td class="teacher-name">Будаев Б.В.</td><td>Мастер ПО 121, 111</td><td>Viber 89140539893</td></tr>
+                    <tr><td class="teacher-name">Тугтова Т.Д.</td><td>МДК 0141, 0301</td><td><a href="https://nsportal.ru/tugutova-tuyana-dorzhievna" target="_blank">nsportal.ru/tugutova-tuyana-dorzhievna</a></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="pedagogam.html" class="back-link"><i class="fas fa-arrow-left"></i> Назад</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 ГБПОУ «Колледж традиционных искусств и ремёсел народов Забайкалья» (ГБПОУ КТИРНЗ)</p>
+        <p><a href="index.html">Главная</a> | <a href="about.html">О колледже</a> | <a href="pedagogam.html">Педагогам</a></p>
+    </div>
+</footer>
+
+<div class="to-top" id="toTopBtn"><i class="fas fa-chevron-up"></i></div>
+<script src="common.js"></script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ГБПОУ КТИРНЗ — Антитеррористическое просвещение</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .breadcrumb {
+            font-size: 14px;
+            margin-bottom: 30px;
+            color: #6c8b5e;
+        }
+        .breadcrumb a {
+            color: #2d6a2f;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb span {
+            color: #1a4a1f;
+            font-weight: 500;
+        }
+
+        .hero-antiterror {
+            background: linear-gradient(135deg, #1e3a1f, #2d6a2f);
+            border-radius: 48px;
+            padding: 40px 30px;
+            color: white;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .hero-antiterror h2 {
+            font-size: 38px;
+            margin-bottom: 16px;
+            color: #ffcd4a;
+        }
+        .hero-antiterror p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .content-block {
+            background: #fefcf5;
+            border-radius: 32px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            border: 1px solid #e9ede5;
+        }
+        .content-block h3 {
+            font-size: 26px;
+            color: #1f5425;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-left: 5px solid #ffcd4a;
+            padding-left: 20px;
+        }
+        .content-block h3 i {
+            color: #ffcd4a;
+            font-size: 28px;
+        }
+
+        .pdf-viewer {
+            background: #f0f4ec;
+            border-radius: 28px;
+            padding: 20px;
+            text-align: center;
+        }
+        .pdf-viewer iframe {
+            width: 100%;
+            height: 600px;
+            border-radius: 20px;
+            border: none;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .pdf-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #d4451e;
+            color: white;
+            font-weight: 700;
+            padding: 12px 28px;
+            border-radius: 60px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: 0.2s;
+        }
+        .pdf-link:hover {
+            background: #b33612;
+            transform: translateY(-2px);
+        }
+
+        .doc-list {
+            list-style: none;
+            padding: 0;
+        }
+        .doc-list li {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #e0e8da;
+            padding-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .doc-list li:last-child {
+            border-bottom: none;
+        }
+        .doc-list i {
+            color: #d4451e;
+            font-size: 22px;
+            width: 32px;
+        }
+        .doc-list a {
+            color: #2d6a2f;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        .doc-list a:hover {
+            color: #d4451e;
+            text-decoration: underline;
+        }
+
+        .warning-block {
+            background: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            border-radius: 20px;
+            margin: 25px 0;
+        }
+        .warning-block strong {
+            color: #d4451e;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .info-card {
+            background: white;
+            border-radius: 24px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.2s;
+            border: 1px solid #e9ede5;
+        }
+        .info-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        .info-card i {
+            font-size: 40px;
+            color: #2d6a2f;
+            margin-bottom: 15px;
+        }
+        .info-card h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #1f5425;
+        }
+        .info-card p {
+            font-size: 14px;
+            color: #4a6741;
+        }
+
+        /* Экстренные контакты */
+.emergency-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 20px;
+}
+.emergency-card {
+    background: white;
+    border-radius: 28px;
+    padding: 24px;
+    text-align: center;
+    transition: 0.2s;
+    border: 1px solid #e9ede5;
+}
+.emergency-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-color: #cddfbf;
+}
+.emergency-icon {
+    font-size: 48px;
+    color: #d4451e;
+    margin-bottom: 16px;
+}
+.emergency-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f5425;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+.emergency-phone {
+    font-size: 22px;
+    font-weight: 800;
+    color: #2d6a2f;
+    margin: 10px 0;
+    letter-spacing: 0.5px;
+}
+.emergency-address {
+    font-size: 13px;
+    color: #4a6741;
+    border-top: 1px solid #e0e8da;
+    padding-top: 12px;
+    margin-top: 8px;
+}
+
+        .back-link {
+            display: inline-block;
+            background: #eef2e8;
+            padding: 10px 24px;
+            border-radius: 40px;
+            color: #2d6a2f;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+            margin-top: 20px;
+        }
+        .back-link:hover {
+            background: #2d6a2f;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .hero-antiterror h2 { font-size: 28px; }
+            .pdf-viewer iframe { height: 400px; }
+            .content-block h3 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <h1>ГБПОУ КТИНЗ</h1>
+            <p>Колледж традиционных искусств народов Забайкалья</p>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О колледже</a>
+            <a href="programs.html">Направления</a>
+            <a href="staff.html">Коллектив</a>
+            <a href="reviews.html">Отзывы</a>
+            <a href="contact.html">Контакты</a>
+            <a href="media.html">Жизнь колледжа</a>
+            <a href="info.html">Информация</a>
+            <a href="pedagogam.html">Педагогам</a>
+        </nav>
+    </div>
+</header>
+
+<section style="padding: 60px 0;">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Главная</a> / <a href="info.html">Информация</a> / <span>Антитеррористическое просвещение</span>
+        </div>
+
+        <div class="hero-antiterror">
+            <h2>Антитеррористическое просвещение</h2>
+            <p>Безопасность — важнейший приоритет. Информируем о мерах профилактики и действиях в экстренных ситуациях.</p>
+        </div>
+
+        <!-- Основной PDF документ (памятка) -->
+        <div class="content-block">
+            <h3><i class="fas fa-shield-alt"></i> Памятка по антитеррористической безопасности</h3>
+            <div class="pdf-viewer">
+                <iframe src="https://xn--g1abfnx.xn--p1ai/upload/files/%D1%80%D0%B0%D0%B7%D0%BD%D0%BE%D0%B5/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BA%D0%B0%20%D0%9C%D0%B8%D0%BD%D0%BF%D1%80%D0%BE%D1%81%D0%B2%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%BF%D0%BE%20%D0%B2%D0%B2.pdf" title="Памятка Минпросвещения по антитеррору"></iframe>
+                <div>
+                    <a href="https://xn--g1abfnx.xn--p1ai/upload/files/%D1%80%D0%B0%D0%B7%D0%BD%D0%BE%D0%B5/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BA%D0%B0%20%D0%9C%D0%B8%D0%BD%D0%BF%D1%80%D0%BE%D1%81%D0%B2%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%BF%D0%BE%20%D0%B2%D0%B2.pdf" target="_blank" class="pdf-link">
+                        <i class="fas fa-download"></i> Скачать памятку (PDF)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Дополнительные материалы и ссылки -->
+        <div class="content-block">
+            <h3><i class="fas fa-folder-open"></i> Официальные документы и инструкции</h3>
+            <ul class="doc-list">
+                <li><i class="fas fa-file-pdf"></i> <a href="#">Памятка для студентов «Действия при угрозе террористического акта»</a></li>
+                <li><i class="fas fa-file-pdf"></i> <a href="#">Инструкция по пропускному и внутриобъектовому режиму</a></li>
+                <li><i class="fas fa-file-pdf"></i> <a href="#">Алгоритм действий при обнаружении подозрительных предметов</a></li>
+                <li><i class="fas fa-external-link-alt"></i> <a href="https://nac.gov.ru/">Национальный антитеррористический комитет (НАК)</a></li>
+                <li><i class="fas fa-external-link-alt"></i> <a href="#">Единый телефон экстренных служб: 112</a></li>
+            </ul>
+            <div class="warning-block">
+                <strong><i class="fas fa-exclamation-triangle"></i> Важно!</strong> При обнаружении подозрительных предметов или возникновении угрозы незамедлительно сообщите администрации колледжа или в правоохранительные органы по телефону 102.
+            </div>
+        </div>
+
+        <!-- Карточки с основными правилами -->
+        <div class="content-block">
+            <h3><i class="fas fa-gavel"></i> Основные правила антитеррористической безопасности</h3>
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fas fa-eye"></i>
+                    <h4>Будьте бдительны</h4>
+                    <p>Обращайте внимание на подозрительных людей и забытые вещи в общественных местах.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h4>Сообщайте о подозрениях</h4>
+                    <p>Не стесняйтесь обращаться к охране или звонить 112, если что-то кажется необычным.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-running"></i>
+                    <h4>Правила эвакуации</h4>
+                    <p>Знайте планы эвакуации, слушайтесь сотрудников, не создавайте панику.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h4>Обучение и тренировки</h4>
+                    <p>Регулярно участвуйте в учениях по гражданской обороне и антитеррору.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Блок с контактами экстренных служб -->
+<div class="content-block">
+    <h3><i class="fas fa-phone-alt"></i> Экстренные контакты</h3>
+    <div class="emergency-grid">
+        <div class="emergency-card">
+            <div class="emergency-icon"><i class="fas fa-phone-volume"></i></div>
+            <div class="emergency-title">Единая дежурная диспетчерская служба (ЕДДС)</div>
+            <div class="emergency-phone">8 (30140) 41-120</div><style>.emergency-phone { font-weight: bold; color: #ff0000;}</style>
+            <div class="emergency-address">с. Иволгинск, ул. Ленина, 30</div>
+        </div>
+        <div class="emergency-card">
+            <div class="emergency-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="emergency-title">Единый номер вызова служб экстренного реагирования</div>
+            <div class="emergency-phone">112</div>
+            <div class="emergency-address">—</div>
+        </div>
+        <div class="emergency-card">
+            <div class="emergency-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="emergency-title">Дежурная часть МВД</div>
+            <div class="emergency-phone">8 (30140) 21-970</div>
+            <div class="emergency-address">с. Иволгинск, ул. Пионерская, 1</div>
+        </div>
+        <div class="emergency-card">
+            <div class="emergency-icon"><i class="fas fa-bolt"></i></div>
+            <div class="emergency-title">Диспетчерская Иволгинский РЭС</div>
+            <div class="emergency-phone">8-924-550-59-14</div>
+            <div class="emergency-address">с. Иволгинск, ул. 40 лет Бурятии, 6</div>
+        </div>
+    </div>
+</div>
+        <div style="text-align: center;">
+            <a href="info.html" class="back-link"><i class="fas fa-arrow-left"></i> Вернуться в раздел информации</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 ГБПОУ «Колледж традиционных искусств и ремёсел народов Забайкалья» (ГБПОУ КТИРНЗ)</p>
+        <p><a href="index.html">Главная</a> | <a href="about.html">О колледже</a> | <a href="info.html">Информация</a></p>
+    </div>
+</footer>
+
+<div class="to-top" id="toTopBtn"><i class="fas fa-chevron-up"></i></div>
+<script src="common.js"></script>
+</body>
+</html>
