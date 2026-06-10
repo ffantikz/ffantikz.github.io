@@ -691,3 +691,35 @@ section h2:after {
         grid-template-columns: 1fr !important;
     }
 }
+/* === МОБИЛЬНАЯ АДАПТАЦИЯ (исправление для "О колледже") === */
+@media (max-width: 768px) {
+    /* Заставляем about-content стать вертикальным */
+    .about-content {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+    .about-text {
+        width: 100% !important;
+    }
+    .stats-row {
+        width: 100% !important;
+        flex-direction: column !important;
+    }
+    .stat-card {
+        width: 100% !important;
+        margin-bottom: 15px;
+    }
+    /* Убираем фиксированные размеры у цифр */
+    .stat-number {
+        font-size: 36px !important;
+    }
+    /* Общие улучшения */
+    .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+    section h2 {
+        font-size: 28px !important;
+    }
+}
